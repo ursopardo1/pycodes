@@ -2,7 +2,8 @@ ativo = True
 logado = True
 login = ['pimpidpimpoda', 'deisebaz']
 senha = ['levi1020', 'barboza0']
-cores = ['Branco', 'Azul', 'Preto', 'Vermelho', 'Verde']
+# cores = ['Branco', 'Preto', 'Vermelho', 'Verde']
+cores = {'Branco': 'de arrombado', 'Azul': 'control', 'Preto': 'mono-black', 'Vermelho':'burn', 'Verde': 'elves'}
 
 login_input = input(f'Insira seu login: ')
 senha_input = input(f'Insira sua senha: ')
@@ -39,8 +40,8 @@ if logado:
 
         if opcao_input == '1':
             deck_input = input(f'Escreva o nome do deck que pretende adicionar: ')
-            deck_input1 = deck_input.split()
-            cores.extend(deck_input1)
+            deck_input1 = input(f'Descreva o deck: ')
+            cores[deck_input] = deck_input1
             print(f'Deck adicionado com sucesso!\n')
             print(f'Decks disponíveis: {cores}\n')
 
